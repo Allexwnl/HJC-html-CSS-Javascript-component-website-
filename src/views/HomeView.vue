@@ -49,8 +49,9 @@ pre {
 #home__img {
   width: 100%;
   object-fit: fill;
-
 }
+
+
 
 .website__name {
   position: absolute;
