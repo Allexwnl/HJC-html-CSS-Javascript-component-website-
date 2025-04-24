@@ -9,6 +9,7 @@
             <ul>
                 <li><router-link to="ButtonAnimation">Button animation</router-link></li>
                 <li><router-link to="GradientButtons">Gradient Buttons</router-link></li>
+                <li><router-link to="FunctionButtons">Function buttons</router-link></li>
             </ul>
             <h1>Tables</h1>
             <ul>

@@ -1,8 +1,37 @@
 <script setup>
+import { onMounted } from 'vue';
 import Navbar from '@/components/Navbar.vue';
 import Sidebar from '@/components/Sidebar.vue';
 
+onMounted(() => {
+  document.querySelectorAll('.copy-button').forEach(button => {
+    button.addEventListener('click', () => {
+      const codeElement = button.nextElementSibling; // assumes code is next
+      const line = codeElement?.querySelector('.line');
+
+      if (!line) {
+        console.error('No .line element found.');
+        return;
+      }
+
+      const codeText = line.innerText.trim();
+
+      navigator.clipboard.writeText(codeText).then(() => {
+        button.innerText = 'Copied!';
+        setTimeout(() => {
+          button.innerText = 'Copy';
+        }, 2000);
+      }).catch(err => {
+        console.error('Failed to copy text: ', err);
+      });
+    });
+  });
+});
+
+
 </script>
+
+
 
 <template>
     <Navbar></Navbar>
@@ -12,12 +41,12 @@ import Sidebar from '@/components/Sidebar.vue';
         <h3 class="title">Gradient button with animation</h3>
         <button class="vinacles1" role="button">Button</button>
 
-        <pre><code><p class="subTitle"> HTML</p>
+        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML </p>
 <p class="line">  < button id="button" role="button">Click!< /button ></p> 
 </code>
 </pre>
         <pre>
-<code><p class="subTitle"> CSS</p>
+<button class="copy-button">Copy</button><code><p class="subTitle"> CSS </p>
 <p class="line">  #button {
       background: #469aff;
       background: linear-gradient(90deg, #469aff 0%, #000032 100%);
@@ -48,11 +77,11 @@ import Sidebar from '@/components/Sidebar.vue';
 
         <h3 class="title">Gradient button without animation</h3>
         <button class="vinacles2" role="button">Button</button>
-        <pre><code><p class="subTitle"> HTML</p>
+        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
 <p class="line">  < button class="button" role="button">Button< /button >
     </p></code></pre>
 
-        <pre><code><p class="subTitle"> CSS</p><p class="line">  
+         <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">  
   .button {
         background: #469aff;
         background: linear-gradient(90deg, #469aff 0%, #000032 100%);
@@ -126,6 +155,18 @@ pre {
     width: 700px;
 }
 
+pre > .copy-button {
+    position: absolute;
+    right: 10px;
+    top: 5px;
+    background-color: #1cb1d1;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
 .subTitle {
     background-color: #ececec;
     color: #1cb1d1;
@@ -143,4 +184,13 @@ pre {
     margin-left: 1%;
     margin: 0;
 }
+
+.copy-button {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
 </style>
