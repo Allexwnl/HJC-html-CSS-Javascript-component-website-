@@ -5,7 +5,7 @@
 <template>
   <header id="navbar_container">
     <nav class="navbar">
-      <img src="../assets/logo.png" alt="">
+      <router-link to="/"><img src="../assets/logo.png" alt=""></router-link>
       <ul>
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/documents">Documents</router-link></li>

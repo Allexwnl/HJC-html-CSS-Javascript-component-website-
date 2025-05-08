@@ -1,0 +1,107 @@
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin-left: 30%;
+}
+
+.on-this-page-sidebar-btnanimation {
+    position: fixed;
+    top: 100px;
+    right: 5%;
+    z-index: 1;
+}
+
+@media screen and (max-width: 1460px) {
+  .on-this-page-sidebar-btnanimation {
+    display: none;
+  }
+}
+
+
+.on-this-page-sidebar-btnanimation > ul > li > a {
+    color: black;
+}
+
+.on-this-page-sidebar-btnanimation > ul > li {
+    transition: transform 0.3s ease-in-out;
+}
+
+.on-this-page-sidebar-btnanimation > ul > li:hover {
+    transform: translateY(-5px);
+}
+
+.on-this-page-sidebar-btnanimation > ul {
+    gap: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.example--button {
+    width: 200px;
+    border: none;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: #1cb1d1;
+    color: white;
+    cursor: pointer;
+}
+
+.button--transform-1:hover {
+    transform: scale(1.1);
+}
+
+.button--transform-2 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.button--transform-2:hover {
+    transform: scale(1.1);
+}
+
+.button--transform-3 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.button--transform-3:hover {
+    transform: scale(1.1);
+}
+
+.button--transform-3:active {
+    transform: scale(1);
+}
+
+.button--hover-1:hover {
+    background-color: #faa728;
+}
+
+.button--hover-2 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.button--hover-2:hover {
+    background-color: #faa728;
+    transform: rotate(5deg);
+}
+
+.button--hover-3 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.button--hover-3:hover {
+    background-color: #faa728;
+    transform: translateY(-5px);
+}
+
+.button--hover-4 {
+    transition: transform 0.3s ease-in-out;
+}
+
+.button--hover-4:hover {
+    background-color: #faa728;
+    transform: translateY(5px) translateX(-10px);
+}
+
+.button--active-1:active {
+    background-color: #faa728;
+}

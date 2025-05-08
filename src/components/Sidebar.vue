@@ -1,5 +1,5 @@
 <template>
-    <section>
+    <aside>
         <div>
             <h1>Sidebars</h1>
             <ul>
@@ -7,6 +7,7 @@
             </ul>
             <h1 class="">Buttons</h1>
             <ul>
+                <li><router-link to="ButtonStyles">Button styles</router-link></li>
                 <li><router-link to="ButtonAnimation">Button animation</router-link></li>
                 <li><router-link to="GradientButtons">Gradient Buttons</router-link></li>
                 <li><router-link to="FunctionButtons">Function buttons</router-link></li>
@@ -16,16 +17,16 @@
                 <li><router-link to="DataTables">DataTables</router-link></li>
             </ul>
         </div>
-    </section>
+    </aside>
 </template>
 <style scoped>
 /*Sidebar CSS*/
-    section {
+    aside {
         background: #1cb1d1;
         background: linear-gradient(90deg, #1cb1d1 7%, #faa728 100%);
         box-shadow: 0px 0px 5px black;
         width: 300px;
-        height: 800px;
+        height: 85dvh;
         border-radius: 8px;
         display: flex;
         position: fixed;

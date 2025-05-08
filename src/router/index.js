@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import('../component-pages/GradientButtons.vue'),
     },
     {
+      path: '/ButtonStyles',
+      name: 'ButtonStyles',
+      component: () => import('../component-pages/ButtonStyles.vue'),
+    },
+    {
       path: '/ButtonAnimation',
       name: 'ButtonAnimation',
       component: () => import('../component-pages/ButtonAnimation.vue'),

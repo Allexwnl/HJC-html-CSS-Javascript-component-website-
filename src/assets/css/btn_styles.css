@@ -1,0 +1,17 @@
+.btn-style-1 {
+    width: 200px;
+    height: 60px;
+    background-color: transparent;
+    border-radius: 30px;
+    border: 2px solid #ff1100;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-style-1:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.btn-style-1:active {
+    transform: scale(1);
+}

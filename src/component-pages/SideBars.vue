@@ -2,7 +2,7 @@
     <Navbar></Navbar>
     <Sidebar></Sidebar>
     <main>
-        <h1>Vinacles sidebars</h1>
+        <h1>Vinacles sidebar</h1>
         <header>
             <nav class="navcbar__container">
                 <img class="Vinacles__logo" src="../assets/Vinacles_FC_Kleur.jpg" alt="vinalces logo">
@@ -34,9 +34,6 @@ import Sidebar from '@/components/Sidebar.vue';
 <style scoped>
 /* Vinacles sidebar design 1 */
 nav {
-    /*remove the /* when you copied the style/*
-    /*position: fixed;
-    left: 3%;*/
     min-width: 200px;
     width: 300px;
     height: 70vh;

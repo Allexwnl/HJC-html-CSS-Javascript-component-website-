@@ -1,3 +1,7 @@
+html {
+  scroll-padding-top: 100px;
+}
+
 body {
   background-color: #ffffff;
   font-family:Arial, Helvetica, sans-serif ;
