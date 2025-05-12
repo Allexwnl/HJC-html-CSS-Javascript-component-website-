@@ -49,8 +49,7 @@ onMounted(() => {
         <button class="vinacles1" role="button">Button</button>
 
         <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML </p>
-<p class="line">  < button id="button" role="button">Click!< /button ></p> 
-</code>
+<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;</p></code>
 </pre>
         <pre>
 <button class="copy-button">Copy</button><code><p class="subTitle"> CSS </p>
@@ -85,7 +84,7 @@ onMounted(() => {
         <h3 class="title">Gradient button without animation</h3>
         <button class="vinacles2" role="button">Button</button>
         <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  < button class="button" role="button">Button< /button >
+<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
     </p></code></pre>
 
          <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">  
@@ -175,7 +174,7 @@ pre > .copy-button {
 }
 
 .subTitle {
-    background-color: #ececec;
+    background-color: #dddddd;
     color: #1cb1d1;
     margin: 0;
     padding: 1%;

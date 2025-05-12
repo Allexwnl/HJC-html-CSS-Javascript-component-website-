@@ -30,6 +30,11 @@ const router = createRouter({
       component: () => import('../component-pages/ButtonAnimation.vue'),
     },
     {
+      path: '/FunctionButtons',
+      name: 'FunctionButtons',
+      component: () => import('../component-pages/ButtonFunctions.vue'),
+    },
+    {
       path: '/SideBars',
       name: 'SideBars',
       component: () => import('../component-pages/SideBars.vue'),

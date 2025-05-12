@@ -24,6 +24,10 @@ a {
   text-decoration: none;
 }
 
+.subTitle {
+  background-color: #dddddd;
+}
+
 main {
   width: 70%;
   display: flex;

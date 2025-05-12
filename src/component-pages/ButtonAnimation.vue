@@ -31,7 +31,7 @@ onMounted(async () => {
             <h5>only transform</h5>
             <button role="button" class="example--button button--transform-1">button</button>
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  < button class="button" role="button">Button< /button >
+<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
     </p></code></pre>
 
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">  
@@ -43,7 +43,7 @@ onMounted(async () => {
             <h5>transform and with transition</h5>
             <button role="button" class="example--button button--transform-2">button</button>
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  < button class="button" role="button">Button< /button >
+<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
     </p></code></pre>
 
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">
@@ -59,7 +59,7 @@ onMounted(async () => {
             <h5>transform transition and active effect</h5>
             <button role="button" class="example--button button--transform-3">button</button>
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  < button class="button" role="button">Button< /button >
+<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
     </p></code></pre>
 
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">
@@ -82,7 +82,7 @@ onMounted(async () => {
             <h5>simple color hover</h5>
             <button role="button" class="example--button button--hover-1"><span>button</span></button>
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  < button class="button" role="button">Button< /button >
+<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
     </p></code></pre>
 
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">
@@ -94,7 +94,7 @@ onMounted(async () => {
             <h5>Rotate hover</h5>
             <button role="button" class="example--button button--hover-2"><span>button</span></button>
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  < button class="button" role="button">Button< /button >
+<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
     </p></code></pre>
 
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">
@@ -111,7 +111,7 @@ onMounted(async () => {
             <h5>translate -Y hover</h5>
             <button role="button" class="example--button button--hover-3"><span>button</span></button>
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  < button class="button" role="button">Button< /button >
+<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
     </p></code></pre>
 
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">
@@ -128,7 +128,7 @@ onMounted(async () => {
             <h5>translate Y&X hover</h5>
             <button role="button" class="example--button button--hover-4"><span>button</span></button>
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  < button class="button" role="button">Button< /button >
+<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
     </p></code></pre>
 
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">
@@ -148,7 +148,7 @@ onMounted(async () => {
             <h5>active</h5>
             <button role="button" class="example--button button--active-1"><span>button</span></button>
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  < button class="button" role="button">Button< /button >
+<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
     </p></code></pre>
 
             <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">
