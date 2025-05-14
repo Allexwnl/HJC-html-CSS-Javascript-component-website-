@@ -2,7 +2,7 @@
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
 import { onMounted, ref } from 'vue'
-import { supabase } from '@/supabase/supabase'
+import { supabase } from '@/Supabase/supabase';
 
 const user = ref(null)
 
@@ -128,7 +128,6 @@ pre {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  flex-wrap: ;
   margin-left: 30px;
 }
 

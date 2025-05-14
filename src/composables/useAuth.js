@@ -1,5 +1,5 @@
 // src/composables/useAuth.js
-import { supabase } from '@/supabase/supabase'
+import { supabase } from '@/Supabase/supabase'
 
 export const useAuth = () => {
   const signUp = async (email, password) => {
