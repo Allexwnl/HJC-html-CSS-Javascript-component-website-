@@ -21,7 +21,7 @@
     </div>
 
     <div class="button-group">
-      <button class="--button-login-register" @click="login, $router.push('/')" to="/">Login</button>
+      <button class="--button-login-register" @click="login" to="/">Login</button>
     </div>
 
     <p v-if="error" class="error-message">{{ error }}</p>
