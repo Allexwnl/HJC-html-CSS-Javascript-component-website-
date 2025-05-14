@@ -50,13 +50,13 @@ function toggleDetails(event) {
                             <td>€60,000</td>
                             <td><button @click="toggleDetails">Details</button></td>
                         </tr>
-                    <tbody class="details-row" style="display: none;">
+                    <td class="details-row" style="display: none;">
                         <tr>
                             <td>naam</td>
                             <td>achternaam</td>
                             <td>functie</td>
                         </tr>
-                    </tbody>
+                    </td>
                     </tbody>
                 </table>
             </div>

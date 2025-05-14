@@ -22,8 +22,8 @@
 <style scoped>
 /*Sidebar CSS*/
     aside {
-        background: #1cb1d1;
-        background: linear-gradient(90deg, #1cb1d1 7%, #faa728 100%);
+        background: #57C785;
+        background: linear-gradient(90deg, #57c785 0%, #2a7b9b 100%);
         box-shadow: 0px 0px 5px black;
         width: 300px;
         height: 85dvh;

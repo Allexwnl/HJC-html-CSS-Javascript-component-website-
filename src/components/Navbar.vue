@@ -10,6 +10,10 @@
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/documents">Documents</router-link></li>
       </ul>
+      <ul class="login-register-container">
+        <li><router-link to="/login">Login</router-link></li>
+        <li>registreer</li>
+      </ul>
     </nav>
   </header>
 </template>
@@ -28,10 +32,17 @@ header {
 }
 
 .navbar {
-  background: rgb(28,177,209);
-  background: linear-gradient(90deg, rgba(28,177,209,1) 7%, rgba(250,167,40,1) 100%);
+  background: #57C785;
+  background: linear-gradient(90deg, #57c785 0%, #2a7b9b 100%);
   display: flex;
   box-shadow: 0px 0px 5px black;
+  justify-content: space-between;
+}
+
+.login-register-container {
+  display: flex;
+  gap: 10px;
+  margin-right: 2%;
 }
 
 img {
@@ -47,7 +58,6 @@ ul {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  width: 100%;
 }
 
 a {

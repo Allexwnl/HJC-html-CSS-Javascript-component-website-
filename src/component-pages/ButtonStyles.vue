@@ -10,117 +10,145 @@ onMounted(async () => {
     await nextTick();
     setupCopyButtons();
 });
-
 </script>
 
 <template>
     <Navbar></Navbar>
     <Sidebar></Sidebar>
     <main>
-        <h3 class="title">Gradient button without animation</h3>
-        <h5>Rounded button</h5>
-        <button class="btn-style-1" role="button">Button</button>
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
-    </p></code></pre>
+      <h3 class="title">Gradient button without animation</h3>
 
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">  
-  .button {
-    width: 200px;
-    height: 60px;
-    background-color: transparent;
-    border-radius: 30px;
-    border: 2px solid #color;
-    transition: all 0.3s ease-in-out;
-  }
+<h5>Rounded button</h5>
+<button class="btn-style-1" role="button">Button</button>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">HTML</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>&lt;button class="button" role="button"&gt;Button&lt;/button&gt;</code></pre>
+</div>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">CSS</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>.button {
+  width: 200px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid #color;
+  transition: all 0.3s ease-in-out;
+}
 
-  .button:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
+.button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}
 
-  .button:active {
-    transform: scale(1);
-  }
+.button:active {
+  transform: scale(1);
+}</code></pre>
+</div>
+<h5>Glow button</h5>
+<button class="btn-style-2" role="button">Button</button>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">HTML</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>&lt;button class="button" role="button"&gt;Button&lt;/button&gt;</code></pre>
+</div>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">CSS</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>.button {
+  width: 200px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 30px;
+  border: 2px solid #ff1100;
+  box-shadow: 0px 0px 15px red;
+  transition: all 0.3s ease-in-out;
+}
 
-</p></code></pre>
-        <h5>Glow button</h5>
-        <button class="btn-style-2" role="button">Button</button>
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
-    </p></code></pre>
+.button:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+}</code></pre>
+</div>
+<h5>Most used button</h5>
+<button class="btn-style-3" role="button">Button</button>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">HTML</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>&lt;button class="button" role="button"&gt;Button&lt;/button&gt;</code></pre>
+</div>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">CSS</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>.button {
+  width: 200px;
+  height: 60px;
+  background-color: turquoise;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
 
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">  
-  .button {
-    width: 200px;
-    height: 60px;
-    background-color: transparent;
-    border-radius: 30px;
-    border: 2px solid #ff1100;
-    box-shadow: 0px 0px 15px red;
-    transition: all 0.3s ease-in-out;
-  }
+.button:hover {
+  translate: 0px -5px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.3);
+  cursor: pointer;
+}</code></pre>
+</div>
+<h5>Icon button</h5>
+<button class="btn-style-3" role="button"><i class="fas fa-bolt"></i> Button</button>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">HTML &lt;head&gt;</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;
+&lt;/head&gt;</code></pre>
+</div>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">HTML</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>&lt;button class="button" role="button"&gt;
+  &lt;i class="fas fa-bolt"&gt;&lt;/i&gt; Button
+&lt;/button&gt;</code></pre>
+</div>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">CSS</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>.button {
+  width: 200px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid #ff1100;
+  box-shadow: 0px 0px 15px red;
+  transition: all 0.3s ease-in-out;
+}
 
-  .button:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-
-</p></code></pre>
-        <h5>Most used button</h5>
-        <button class="btn-style-3" role="button">Button</button>
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
-    </p></code></pre>
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">  
-  .button {
-    width: 200px;
-    height: 60px;
-    background-color: transparent;
-    border-radius: 8px;
-    border: 2px solid #ff1100;
-    box-shadow: 0px 0px 15px red;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .button:hover {
-    transform: scale(1.1);
-    cursor: pointer;
-  }
-
-</p></code></pre>
-        <h5>Icon button</h5>
-        <button class="btn-style-3" role="button"><i class="fas fa-bolt"></i> Button</button>
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML &lt;head&gt;</p>
-<p class="line">  &lt;head&gt;
-    &lt;link rel="stylesheet" 
-    href="https://cdnjs.cloudflare.com/ajax/libs/
-    font-awesome/6.4.0/css/all.min.css"&gt;
-  &lt;/head&gt;
-    </p></code></pre>
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  &lt;button class="button" role="button"&gt;
-    &lt;i class="fas fa-bolt"&gt;&lt;i&gt; button
-  &lt;/button&gt;
-    </p></code></pre>
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">  
-  .button {
-    width: 200px;
-    height: 60px;
-    background-color: transparent;
-    border-radius: 8px;
-    border: 2px solid #ff1100;
-    box-shadow: 0px 0px 15px red;
-    transition: all 0.3s ease-in-out;
-  }
-
-  .button:hover {
-    translate: 0px -5px;
-    box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.3);
-    cursor: pointer;
-  }
-
-</p></code></pre>
+.button:hover {
+  translate: 0px -5px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.3);
+  cursor: pointer;
+}</code></pre>
+</div>
 <section id="icon-libary" class="icon-libary-explained">
         <h1>icon libary</h1>
         <p>This component uses Font Awesome 6.4.0 via CDN to provide a rich set of scalable vector icons. Font Awesome
@@ -154,52 +182,56 @@ onMounted(async () => {
 </section>
 
 <h5>Icon Rotation button</h5>
-        <span class="btn-style-4"><button role="button">Button</button><i class="fa-solid fa-arrow-right"></i></span>
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> HTML</p>
-<p class="line">  &lt;span class="btn-container"&gt;
-    &lt;button class="button" role="button"&gt;
-            button
-    &lt;/button&gt;
-  &lt;i class="fa-solid fa-arrow-right"&gt;&lt;/i&gt; 
-  &lt;/span&gt;
-    </p></code></pre>
-        <pre><button class="copy-button">Copy</button><code><p class="subTitle"> CSS</p><p class="line">  
-  .btn-container {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    width: 200px;
-    height: 60px;
-    background-color: turquoise;
-    border-radius: 8px;
-    border: none;
-    transition: all 0.3s ease-in-out;
-  }
+<span class="btn-style-4">
+  <button role="button">Button</button>
+  <i class="fa-solid fa-arrow-right"></i>
+</span>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">HTML</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>&lt;span class="btn-container"&gt;
+  &lt;button class="button" role="button"&gt;Button&lt;/button&gt;
+  &lt;i class="fa-solid fa-arrow-right"&gt;&lt;/i&gt;
+&lt;/span&gt;</code></pre>
+</div>
+<div class="code-block">
+  <div class="code-header">
+    <span class="language-label">CSS</span>
+    <button class="copy-button" onclick="copyCode(this)">Copy</button>
+  </div>
+  <pre><code>.btn-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 200px;
+  height: 60px;
+  background-color: turquoise;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
 
-  .btn-container:hover {
-    translate: 0px -5px;
-    box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.3);
-    cursor: pointer;
-  }
+.btn-container:hover {
+  translate: 0px -5px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.3);
+  cursor: pointer;
+}
 
-  .btn-container i {
-      transition: all 0.3s ease-in-out;
-  }
+.btn-container i {
+  transition: all 0.3s ease-in-out;
+}
 
-  .button {
-    background-color: transparent;
-    border: none;
-    color: white;
-  }
+.button {
+  background-color: transparent;
+  border: none;
+  color: white;
+}
 
-  .btn-container i {
-    transition: all 0.3s ease-in-out;
-  }
-
-  .btn-container:hover i {
-    rotate: -45deg;
-  }
-
-</p></code></pre>
+.btn-container:hover i {
+  rotate: -45deg;
+}</code></pre>
+</div>
     </main>
 </template>

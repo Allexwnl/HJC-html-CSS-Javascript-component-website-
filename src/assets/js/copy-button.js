@@ -1,15 +1,16 @@
 export function setupCopyButtons() {
   document.querySelectorAll('.copy-button').forEach(button => {
     button.addEventListener('click', () => {
-      const codeElement = button.nextElementSibling;
-      const line = codeElement?.querySelector('.line');
+      const codeElement = button.closest('.code-block')?.querySelector('code');
 
-      if (!line) {
-        console.error('No .line element found.');
+      if (!codeElement) {
+        console.error('Code element not found.');
+        button.innerText = 'Error';
+        setTimeout(() => button.innerText = 'Copy', 2000);
         return;
       }
 
-      const codeText = line.innerText.trim();
+      const codeText = codeElement.innerText.trim();
 
       navigator.clipboard.writeText(codeText).then(() => {
         button.innerText = 'Copied!';
@@ -18,6 +19,8 @@ export function setupCopyButtons() {
         }, 2000);
       }).catch(err => {
         console.error('Failed to copy text: ', err);
+        button.innerText = 'Error';
+        setTimeout(() => button.innerText = 'Copy', 2000);
       });
     });
   });

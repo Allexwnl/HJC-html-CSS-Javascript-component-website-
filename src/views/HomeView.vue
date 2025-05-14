@@ -1,26 +1,39 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
+import { onMounted, ref } from 'vue'
+import { supabase } from '@/supabase/supabase'
+
+const user = ref(null)
+
+onMounted(async () => {
+  const { data: { user: currentUser } } = await supabase.auth.getUser()
+  user.value = currentUser
+})
 </script>
 
 <template>
   <Navbar></Navbar>
   <main class="main__container__home">
-    <section class="home__img__container">
-      <video id="home__video" src="../assets/home__Menu__img.mp4" autoplay muted></video>
-      <button id="button"><router-link to="/documents">Browse Components</router-link></button>
-    </section>
-    <section id="about_us">
-      <img src="../assets/homeimg2.png" alt="home_img_2">
-      <div class="text__container">
-        <h1>What do we provide </h1>
-        <p>At HJC, we specialize in providing high-quality, pre-built HTML, CSS, and JavaScript components
-          that are designed to save you valuable time and effort. Instead of spending hours searching for solutions,
-          debugging, or trying to figure out how things work, our components offer you the perfect foundation to build
-          faster and smarter.</p>
+    <section class="home--container">
+      <div>
+        <h1 class="title--mainpage">HCJ</h1>
+        <h2>Alles voor jouw componenten</h2>
+        <p>Vind snel en eenvoudig de juiste onderdelen van jouw project.</p>
+        <button id="button"><router-link to="/documents">Browse Components</router-link></button>
+      </div>
+      <div class="video-container">
+        <video src="/public/video/home-video.mp4" autoplay muted></video>
       </div>
     </section>
+    <section id="about_us">
+
+    </section>
   </main>
+  <div>
+    <p v-if="user">Welkom, {{ user.email }}</p>
+    <p v-else>Niet ingelogd</p>
+  </div>
   <Footer></Footer>
 </template>
 
@@ -29,102 +42,108 @@ import Footer from '@/components/Footer.vue';
 .main__container__home {
   width: 100%;
   margin: 0%;
+  margin-top: 100px;
   padding: 0%;
   display: block;
   position: relative;
   left: 0;
 }
 
-h1,
-p {
-  color: #0b3867;
+.title--mainpage {
+  font-size: 80px;
+  margin: 0;
 }
 
-pre {
-  background-color: #e5e5e5;
-  border: 1px solid #dadada;
+h2 {
+  font-size: 40px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+h4 {
+  font-size: 20px;
+}
+
+h5 {
+  font-size: 15px;
+}
+
+h1,
+h3,
+h4,
+h5,
+h6,
+p {
+  color: white;
 }
 
 /*code blocks*/
-pre {
-  background: #ffffff03;
-  backdrop-filter: blur(10px);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-  border-radius: 8px;
-  width: 700px;
-}
-
-pre>.copy-button {
-  position: absolute;
-  right: 10px;
-  top: 5px;
-  background-color: #1cb1d1;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-.subTitle {
-  background-color: #ececec;
-  color: #1cb1d1;
-  margin: 0;
-  padding: 1%;
-  border-radius: 8px 8px 0px 0px;
-}
-
-.line {
+.code-block {
+  background-color: #0f172a;
   width: 640px;
+  border-radius: 12px;
+  margin-top: 30px;
+  margin-bottom: 1.5rem;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  font-family: 'Fira Code', monospace;
+}
+
+.code-header {
   display: flex;
-  flex-direction: row;
-  background-color: rgba(255, 255, 255, 0.01);
-  color: #1cb1d1;
-  margin-left: 1%;
-  margin: 0;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  color: #94a3b8;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  backdrop-filter: blur(4px);
 }
 
 .copy-button {
-  background-color: transparent;
+  background: #14b8a6;
+  color: white;
   border: none;
-  text-decoration: underline;
+  padding: 0.25rem 0.6rem;
+  font-size: 0.75rem;
+  border-radius: 6px;
   cursor: pointer;
 }
 
+.copy-button:hover {
+  background: #0d9488;
+}
+
+pre {
+  margin: 0;
+  padding: 1rem;
+  color: #e2e8f0;
+  font-size: 0.9rem;
+}
+
 /*css*/
-.home__img__container {
-  position: relative;
-  object-fit: fill;
-  z-index: 0;
-  border-bottom: 3px #1cb1d1;
+.home--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: ;
+  margin-left: 30px;
 }
 
-#home__video {
-  width: 100%;
-  object-fit: fill;
-  z-index: -1;
-}
-
-img[alt="home_img_2"] {
-  width: 30%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.website__name {
-  position: absolute;
-  top: 40%;
-  left: 4%;
-  font-size: 60px;
-
+.video-container video {
+  margin-right: 30px;
+  border-radius: 12px;
+  width: 900px;
 }
 
 #button {
-  background: linear-gradient(90deg, #14809a 0%, #f89d25 100%);
+  background: linear-gradient(90deg, #57c785 0%, #2a7b9b 100%);
   color: white;
   position: absolute;
   top: 80%;
-  left: 50%;
+  left: 180px;
   transform-origin: center center;
   width: 50%;
   max-width: 300px;
@@ -148,23 +167,7 @@ img[alt="home_img_2"] {
   transform: translate(-50%, -50%) scale(1.1);
 }
 
-#about_us {
-  width: 100%;
-  margin-right: 20px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-}
-
-#about_us>h1,
-#about_us>p {
-  margin-right: 10%;
-  width: 30%;
-}
-
-.text__container {
-  display: flex;
-  flex-direction: column;
-  width: 500px;
+#button:active {
+  transform: translate(-50%, -50%) scale(1);
 }
 </style>

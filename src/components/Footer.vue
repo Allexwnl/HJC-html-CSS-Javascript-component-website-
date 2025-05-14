@@ -28,12 +28,10 @@
     display: flex;
     flex-direction: row;
     justify-content: center;
-    background: rgb(28, 177, 209);
-    background: linear-gradient(90deg, rgba(28, 177, 209, 1) 7%, rgba(250, 167, 40, 1) 100%);
+    background: #57C785;
+    background: linear-gradient(90deg, #57c785 0%, #2a7b9b 100%);
     text-align: center;
     box-shadow: 0px 0px 5px black;
-    position: relative;
-    bottom: 0;
     padding-bottom: 20px;
 }
 
