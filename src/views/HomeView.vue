@@ -1,15 +1,29 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
+import { supabase } from '@/Supabase/supabase'
 import { onMounted, ref } from 'vue'
-import { supabase } from '@/Supabase/supabase';
+import { useRouter } from 'vue-router'
+import { useAuth } from '@/composables/useAuth'
 
 const user = ref(null)
+const router = useRouter()
+const { signOut } = useAuth()
 
 onMounted(async () => {
   const { data: { user: currentUser } } = await supabase.auth.getUser()
   user.value = currentUser
 })
+
+const logout = async () => {
+  const { error } = await signOut()
+  if (!error) {
+    user.value = null
+    router.push('/login')  // of een andere pagina na logout
+  } else {
+    console.error('Logout failed:', error.message)
+  }
+}
 </script>
 
 <template>
@@ -27,12 +41,12 @@ onMounted(async () => {
       </div>
     </section>
     <section id="about_us">
-
     </section>
   </main>
   <div>
     <p v-if="user">Welkom, {{ user.email }}</p>
     <p v-else>Niet ingelogd</p>
+    <button v-if="user" @click="logout" class="logout-button">Logout</button>
   </div>
   <Footer></Footer>
 </template>
