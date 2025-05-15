@@ -1,18 +1,43 @@
 <script setup>
+import { useRouter } from 'vue-router'
+import { supabase } from '@/Supabase/supabase'
+import { onMounted, ref } from 'vue'
+import { useAuth } from '@/composables/useAuth'
 
+const user = ref(null)
+const router = useRouter()
+const { signOut } = useAuth()
+
+onMounted(async () => {
+  const { data: { user: currentUser } } = await supabase.auth.getUser()
+  user.value = currentUser
+})
+
+const logout = async () => {
+  const { error } = await signOut()
+  if (!error) {
+    user.value = null
+    router.push('/login')  // of een andere pagina na logout
+  } else {
+    console.error('Logout failed:', error.message)
+  }
+}
 </script>
 
 <template>
   <header id="navbar_container">
     <nav class="navbar">
-      <router-link to="/"><img src="/img/logo.png" alt=""></router-link>
+      <router-link to="/"><img src="/img/logo.png" alt="logo"></router-link>
       <ul>
         <li><router-link to="/">Home</router-link></li>
         <li><router-link to="/documents">Documents</router-link></li>
       </ul>
       <ul class="login-register-container">
-        <li><router-link to="/login">Login</router-link></li>
-        <li>registreer</li>
+        <li v-if="!user"><router-link to="/login">Login</router-link></li>
+        <li v-if="!user"><router-link to="/register">Register</router-link></li>
+        <li v-if="user">
+          <router-link to="/login" @click.prevent="logout" class="logout-link">Logout</router-link>
+        </li>
       </ul>
     </nav>
   </header>
@@ -20,7 +45,7 @@
 
 <style scoped>
 /*Navbar CSS*/
-header { 
+header {
   padding: 0;
   margin: 0;
   width: 100%;

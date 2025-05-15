@@ -20,6 +20,11 @@ const router = createRouter({
       component: () => import('../component-pages/Login/login.vue'),
     },
     {
+      path: '/register',
+      name: 'register',
+      component: () => import('../component-pages/Login/register.vue'),
+    },
+    {
       path: '/GradientButtons',
       name: 'GradientButtons',
       component: () => import('../component-pages/GradientButtons.vue'),

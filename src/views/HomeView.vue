@@ -14,16 +14,6 @@ onMounted(async () => {
   const { data: { user: currentUser } } = await supabase.auth.getUser()
   user.value = currentUser
 })
-
-const logout = async () => {
-  const { error } = await signOut()
-  if (!error) {
-    user.value = null
-    router.push('/login')  // of een andere pagina na logout
-  } else {
-    console.error('Logout failed:', error.message)
-  }
-}
 </script>
 
 <template>
@@ -46,7 +36,6 @@ const logout = async () => {
   <div>
     <p v-if="user">Welkom, {{ user.email }}</p>
     <p v-else>Niet ingelogd</p>
-    <button v-if="user" @click="logout" class="logout-button">Logout</button>
   </div>
   <Footer></Footer>
 </template>
