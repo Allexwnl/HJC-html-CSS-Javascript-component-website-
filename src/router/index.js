@@ -30,6 +30,11 @@ const router = createRouter({
       component: () => import('../component-pages/suggestions/SuggestieView.vue'),
     },
     {
+      path: '/globalLoader',
+      name: 'globaloader',
+      component: () => import('../components/GlobalLoader.vue'),
+    },
+    {
       path: '/GradientButtons',
       name: 'GradientButtons',
       component: () => import('../component-pages/GradientButtons.vue'),

@@ -1,6 +1,7 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
+import GlobalLoader from '@/components/GlobalLoader.vue';
 import { supabase } from '@/Supabase/supabase'
 import { onMounted, ref } from 'vue'
 import { useRouter } from 'vue-router'
@@ -18,6 +19,7 @@ onMounted(async () => {
 </script>
 
 <template>
+  <GlobalLoader></GlobalLoader>
   <Navbar></Navbar>
   <main class="main__container__home">
     <section class="home--container">
@@ -213,11 +215,15 @@ pre {
   justify-content: center;
   align-items: center;
   width: 50%;
+  
 }
 
 .video-container video {
   border-radius: 12px;
-  width: 80%;
+  margin-right: 50px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
 }
 
 .button-explained {
@@ -245,7 +251,6 @@ pre {
   background-size: 200% auto;
   cursor: pointer;
   pointer-events: auto;
-  z-index: 1;
 }
 
 #button:hover {
