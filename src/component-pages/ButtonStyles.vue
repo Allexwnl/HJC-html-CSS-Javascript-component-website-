@@ -134,13 +134,12 @@ onMounted(async () => {
     <button class="copy-button" onclick="copyCode(this)">Copy</button>
   </div>
   <pre><code>.button {
-  width: 200px;
-  height: 60px;
-  background-color: transparent;
-  border-radius: 8px;
-  border: 2px solid #ff1100;
-  box-shadow: 0px 0px 15px red;
-  transition: all 0.3s ease-in-out;
+    width: 200px;
+    height: 60px;
+    background-color: turquoise;
+    border-radius: 8px;
+    border: none;
+    transition: all 0.3s ease-in-out;
 }
 
 .button:hover {
