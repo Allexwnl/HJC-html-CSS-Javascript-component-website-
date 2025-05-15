@@ -54,10 +54,3 @@ const login = async () => {
   }
 }
 </script>
-
-<style scoped>
-a {
-  text-decoration: none;
-  color: #000;
-}
-</style>

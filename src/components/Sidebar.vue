@@ -35,6 +35,7 @@
     }
 
     a {
+        color: white;
         font-weight: bold;
     }
 
@@ -48,5 +49,4 @@
         flex-direction: column;
         gap: 10px;
     }
-
 </style>

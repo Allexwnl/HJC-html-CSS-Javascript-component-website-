@@ -1,0 +1,24 @@
+.suggestie-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+}
+textarea {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 1rem;
+}
+.--button-login-register {
+  width: 200px;
+  height: 60px;
+  background-color: turquoise;
+  border-radius: 8px;
+  border: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.--button-login-register:hover {
+  translate: 0px -5px;
+  box-shadow: 0px 1px 10px rgb(0, 0, 0, 0.3);
+  cursor: pointer;
+}

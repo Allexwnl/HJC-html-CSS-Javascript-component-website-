@@ -34,7 +34,7 @@ onMounted(async () => {
     </section>
   </main>
   <div>
-    <p v-if="user">Welkom, {{ user.email }}</p>
+    <p v-if="user">Welkom, {{ user.user_metadata.display_name }}</p>
     <p v-else>Niet ingelogd</p>
   </div>
   <Footer></Footer>

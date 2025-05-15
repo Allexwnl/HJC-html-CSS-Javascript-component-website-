@@ -25,6 +25,11 @@ const router = createRouter({
       component: () => import('../component-pages/Login/register.vue'),
     },
     {
+      path: '/suggestions',
+      name: 'suggestions',
+      component: () => import('../component-pages/suggestions/SuggestieView.vue'),
+    },
+    {
       path: '/GradientButtons',
       name: 'GradientButtons',
       component: () => import('../component-pages/GradientButtons.vue'),
