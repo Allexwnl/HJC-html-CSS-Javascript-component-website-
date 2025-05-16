@@ -1,0 +1,138 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: white;
+}
+
+.main__container__home {
+  width: 100%;
+  margin: 0%;
+  margin-top: 100px;
+  padding: 0%;
+  display: block;
+  position: relative;
+  left: 0;
+}
+
+.home-button-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 100px;
+  margin-top: 320px;
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  margin-left: 30px;
+  width: 30%;
+}
+
+.home--container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.video-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  
+}
+
+.video-container video {
+  border-radius: 12px;
+  margin-right: 50px;
+  width: 100%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+
+}
+
+.button-explained {
+  width: 50%;
+}
+
+.title--mainpage {
+  font-size: 80px;
+  margin: 0;
+}
+
+
+#button {
+  background: linear-gradient(90deg, #57c785 0%, #2a7b9b 100%);
+  color: white;
+  left: 180px;
+  width: 50%;
+  max-width: 300px;
+  text-align: center;
+  border-radius: 50px;
+  padding: 18px;
+  border: 2px solid #FF501A;
+  transform: scale(1);
+  transition: transform 0.5s, ease-in-out 0.5s;
+  background-size: 200% auto;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+#button:hover {
+  background-position: right center;
+  color: white;
+  text-decoration: none;
+  transform: scale(1.1);
+}
+
+#button:active {
+  transform: scale(1);
+}
+
+/*mobile-first*/
+@media (max-width: 1495px) {
+.home--container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 100px;
+}
+
+.text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0;
+}
+
+#button {
+    width: 100%;
+    max-width: 300px;
+    margin-left: 0;
+}
+
+.video-container {
+    width: 80%;
+}
+.video-container video {
+    margin-right: 0;
+}
+
+.button-explained button {
+    margin-top: 50px;
+}
+}
+
+@media (max-width: 768px) {
+    .code-block {
+    width: 450px;
+}
+}

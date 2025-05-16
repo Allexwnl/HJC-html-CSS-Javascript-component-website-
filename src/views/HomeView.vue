@@ -1,16 +1,21 @@
 <script setup>
 import Navbar from '@/components/Navbar.vue';
 import Footer from '@/components/Footer.vue';
-import GlobalLoader from '@/components/GlobalLoader.vue';
-import { supabase } from '@/Supabase/supabase'
-import { onMounted, ref } from 'vue'
-import { useRouter } from 'vue-router'
-import { useAuth } from '@/composables/useAuth'
 import '@/assets/css/btn_styles.css'
+import '@/assets/css/home_page.css'
+import { supabase } from '@/Supabase/supabase'
+import { onMounted, ref, nextTick } from 'vue'
+import { useRouter } from 'vue-router'
+import { setupCopyButtons } from '@/assets/js/copy-button.js';
+
+onMounted(async () => {
+    // Wait until the DOM is fully rendered
+    await nextTick();
+    setupCopyButtons();
+});
 
 const user = ref(null)
 const router = useRouter()
-const { signOut } = useAuth()
 
 onMounted(async () => {
   const { data: { user: currentUser } } = await supabase.auth.getUser()
@@ -19,7 +24,6 @@ onMounted(async () => {
 </script>
 
 <template>
-  <GlobalLoader></GlobalLoader>
   <Navbar></Navbar>
   <main class="main__container__home">
     <section class="home--container">
@@ -38,7 +42,6 @@ onMounted(async () => {
     </section>
   </main>
   <div class="home-button-container">
-
     <section>
       <div class="code-block">
         <div class="code-header">
@@ -102,34 +105,6 @@ onMounted(async () => {
 </template>
 
 <style>
-/*Global CSS*/
-
-
-h2 {
-  font-size: 40px;
-}
-
-h3 {
-  font-size: 20px;
-}
-
-h4 {
-  font-size: 20px;
-}
-
-h5 {
-  font-size: 15px;
-}
-
-h1,
-h3,
-h4,
-h5,
-h6,
-p {
-  color: white;
-}
-
 /*code blocks*/
 .code-block {
   background-color: #0f172a;
@@ -174,93 +149,40 @@ pre {
   font-size: 0.9rem;
 }
 
-/*css*/
-.main__container__home {
-  width: 100%;
-  margin: 0%;
-  margin-top: 100px;
-  padding: 0%;
-  display: block;
-  position: relative;
-  left: 0;
-}
 
-.home-button-container {
-  display: flex;
-  justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 100px;
-  margin-top: 320px;
-}
-
-.text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: start;
-  align-items: start;
-  margin-left: 30px;
-  width: 30%;
-}
-
-.home--container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-}
-
-.video-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 50%;
+@media (max-width: 1495px) {
+  
+  .home-button-container {
+    gap: 20px;
+  }
+  
+  .home-button-container section:nth-child(1) {
+    order: 2;
+  }
+  
+  .home-button-container section.button-explained {
+    order: 1;
+  }
   
 }
 
-.video-container video {
-  border-radius: 12px;
-  margin-right: 50px;
-  width: 100%;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
-
-}
-
+@media (max-width: 1317px) {
 .button-explained {
-  width: 50%;
-}
-
-.title--mainpage {
-  font-size: 80px;
-  margin: 0;
-}
-
-
-#button {
-  background: linear-gradient(90deg, #57c785 0%, #2a7b9b 100%);
-  color: white;
-  left: 180px;
-  width: 50%;
-  max-width: 300px;
   text-align: center;
-  border-radius: 50px;
-  padding: 18px;
-  border: 2px solid #FF501A;
-  transform: scale(1);
-  transition: transform 0.5s, ease-in-out 0.5s;
-  background-size: 200% auto;
-  cursor: pointer;
-  pointer-events: auto;
+}
+}
+@media (max-width: 768px) {
+    .code-block {
+    width: 450px;
 }
 
-#button:hover {
-  background-position: right center;
-  color: white;
-  text-decoration: none;
-  transform: scale(1.1);
+.button-explained p {
+    font-size: 0.8rem;
 }
-
-#button:active {
-  transform: scale(1);
+}
+@media (max-width: 468px) {
+    .code-block {
+    width: 250px;
+}
 }
 </style>

@@ -73,4 +73,13 @@ td,
 th {
     border-bottom: 3px solid #FF501A;
 }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: white;
+}
 </style>

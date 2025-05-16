@@ -24,6 +24,15 @@
 </template>
 
 <style scoped>
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: white;
+}
+
 .footer {
     display: flex;
     flex-direction: row;

@@ -30,29 +30,24 @@ const router = createRouter({
       component: () => import('../component-pages/suggestions/SuggestieView.vue'),
     },
     {
-      path: '/globalLoader',
-      name: 'globaloader',
-      component: () => import('../components/GlobalLoader.vue'),
-    },
-    {
       path: '/GradientButtons',
       name: 'GradientButtons',
-      component: () => import('../component-pages/GradientButtons.vue'),
+      component: () => import('../component-pages/buttons/GradientButtons.vue'),
     },
     {
       path: '/ButtonStyles',
       name: 'ButtonStyles',
-      component: () => import('../component-pages/ButtonStyles.vue'),
+      component: () => import('../component-pages/buttons/ButtonStyles.vue'),
     },
     {
       path: '/ButtonAnimation',
       name: 'ButtonAnimation',
-      component: () => import('../component-pages/ButtonAnimation.vue'),
+      component: () => import('../component-pages/buttons/ButtonAnimation.vue'),
     },
     {
       path: '/FunctionButtons',
       name: 'FunctionButtons',
-      component: () => import('../component-pages/ButtonFunctions.vue'),
+      component: () => import('../component-pages/buttons/ButtonFunctions.vue'),
     },
     {
       path: '/SideBars',
@@ -63,6 +58,11 @@ const router = createRouter({
       path: '/DataTables',
       name: 'DataTables',
       component: () => import('../component-pages/DataTables.vue'),
+    },
+    {
+      path: '/ImageCards',
+      name: 'ImageCards',
+      component: () => import('../component-pages/cards/ImageCards.vue'),
     },
   ],
 })

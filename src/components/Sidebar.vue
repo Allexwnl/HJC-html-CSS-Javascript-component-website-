@@ -16,6 +16,10 @@
             <ul>
                 <li><router-link to="DataTables">DataTables</router-link></li>
             </ul>
+            <h1>Cards</h1>
+            <ul>
+                <li><router-link to="ImageCards">Image cards</router-link></li>
+            </ul>
         </div>
     </aside>
 </template>

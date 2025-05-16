@@ -32,6 +32,15 @@ import Sidebar from '@/components/Sidebar.vue';
 </script>
 
 <style scoped>
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: white;
+}
+
 /* Vinacles sidebar design 1 */
 nav {
     min-width: 200px;

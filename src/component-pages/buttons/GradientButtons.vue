@@ -110,7 +110,14 @@ onMounted(() => {
 .title {
     text-decoration: underline;
 }
-
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: white;
+}
 /*vinacles button with animation*/
 
 .vinacles1 {
@@ -151,52 +158,5 @@ onMounted(() => {
     border: 2px solid #FF501A;
     cursor: pointer;
 }
-
-/*code blocks*/
-pre {
-    background: #ffffff03;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    width: 700px;
-}
-
-pre > .copy-button {
-    position: absolute;
-    right: 10px;
-    top: 5px;
-    background-color: #1cb1d1;
-    color: white;
-    border: none;
-    padding: 5px 10px;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.subTitle {
-    background-color: #dddddd;
-    color: #1cb1d1;
-    margin: 0;
-    padding: 1%;
-    border-radius: 8px 8px 0px 0px;
-}
-
-.line {
-    width: 640px;
-    display: flex;
-    flex-direction: row;
-    background-color: rgba(255, 255, 255, 0.01);
-    color: #1cb1d1;
-    margin-left: 1%;
-    margin: 0;
-}
-
-.copy-button {
-    background-color: transparent;
-    border: none;
-    text-decoration: underline;
-    cursor: pointer;
-}
-
 
 </style>
