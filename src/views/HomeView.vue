@@ -170,9 +170,17 @@ pre {
 .button-explained {
   text-align: center;
 }
+
+  .home-button-container {
+    margin-top: 100px;
+  }
 }
 @media (max-width: 768px) {
-    .code-block {
+  .home-button-container {
+    margin-top: 70px;
+  }
+  
+  .code-block {
     width: 450px;
 }
 
