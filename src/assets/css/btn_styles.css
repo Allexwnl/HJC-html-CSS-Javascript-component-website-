@@ -86,13 +86,20 @@
 }
 
 @media (max-width: 768px) {
-  main,
-  section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-left: 0;
-    width: 100%;
-  }
+
+    main,
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .icon-libary-explained p {
+        width: 300px;
+        overflow-wrap: break-word;
+
+    }
 }
