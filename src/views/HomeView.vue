@@ -205,8 +205,8 @@ pre {
   }
 
   .button-explained,
-  .text-container p {
-    width: 300px;
+  .text-container {
+    width: 290px;
   }
 }
 
