@@ -22,6 +22,8 @@
             </ul>
         </div>
     </aside>
+
+
 </template>
 <style scoped>
 /*Sidebar CSS*/
@@ -52,5 +54,11 @@
         display: flex;
         flex-direction: column;
         gap: 10px;
+    }
+
+    @media (max-width: 768px) {
+        aside {
+            display: none;
+        }
     }
 </style>

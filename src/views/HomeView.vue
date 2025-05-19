@@ -9,9 +9,9 @@ import { useRouter } from 'vue-router'
 import { setupCopyButtons } from '@/assets/js/copy-button.js';
 
 onMounted(async () => {
-    // Wait until the DOM is fully rendered
-    await nextTick();
-    setupCopyButtons();
+  // Wait until the DOM is fully rendered
+  await nextTick();
+  setupCopyButtons();
 });
 
 const user = ref(null)
@@ -30,8 +30,9 @@ onMounted(async () => {
       <div class="text-container">
         <h1 class="title--mainpage">HCJ</h1>
         <h2>Alles voor jouw componenten</h2>
-        <p>Vind snel en eenvoudig de juiste onderdelen van jouw project.</p>
-        <button id="button"><router-link to="/documents">Browse Components</router-link></button>
+        <p>HCJ provides a comprehensive library of HTML, CSS, and JavaScript components to accelerate your web
+          development workflow.</p>
+        <button id="button"><router-link to="/documents">View components</router-link></button>
       </div>
       <div class="video-container">
         <video autoplay loop muted>
@@ -97,7 +98,8 @@ onMounted(async () => {
 
         Don’t just take our word for it — browse through the collection and see for yourself. There’s a world of
         design-ready tools waiting for you!</p>
-      <button class="btn-style-3" @click="router.push('/ButtonStyles')" role="button"><i class="fas fa-bolt"></i> Click me</button>
+      <button class="btn-style-3" @click="router.push('/ButtonStyles')" role="button"><i class="fas fa-bolt"></i> Click
+        me</button>
     </section>
   </div>
 
@@ -151,46 +153,66 @@ pre {
 
 
 @media (max-width: 1495px) {
-  
+
   .home-button-container {
     gap: 20px;
   }
-  
+
   .home-button-container section:nth-child(1) {
     order: 2;
   }
-  
+
   .home-button-container section.button-explained {
     order: 1;
   }
-  
+
 }
 
 @media (max-width: 1317px) {
-.button-explained {
-  text-align: center;
-}
+
+  .button-explained,
+  h1,
+  h2,
+  p {
+    text-align: center;
+  }
 
   .home-button-container {
     margin-top: 100px;
   }
 }
+
 @media (max-width: 768px) {
+  main,
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+  }
+
   .home-button-container {
     margin-top: 70px;
   }
-  
+
   .code-block {
     width: 450px;
+  }
+
+  .button-explained p {
+    font-size: 0.8rem;
+  }
+
+  .button-explained,
+  .text-container p {
+    width: 300px;
+  }
 }
 
-.button-explained p {
-    font-size: 0.8rem;
-}
-}
 @media (max-width: 468px) {
-    .code-block {
+  .code-block {
     width: 250px;
-}
+  }
 }
 </style>

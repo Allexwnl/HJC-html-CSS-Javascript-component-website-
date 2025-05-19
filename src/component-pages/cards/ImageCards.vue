@@ -1,7 +1,7 @@
 <template>
+    <Navbar></Navbar>
+    <Sidebar></Sidebar>
     <main>
-        <Navbar></Navbar>
-        <Sidebar></Sidebar>
         <section>
             <h1>Image Cards</h1>
             <h3>Image Cards</h3>

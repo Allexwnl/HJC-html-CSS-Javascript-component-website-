@@ -84,3 +84,15 @@
 .btn-style-4:hover i {
     rotate: -45deg;
 }
+
+@media (max-width: 768px) {
+  main,
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+  }
+}

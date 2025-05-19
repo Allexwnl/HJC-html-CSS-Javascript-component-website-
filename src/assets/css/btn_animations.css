@@ -105,3 +105,15 @@ main {
 .button--active-1:active {
     background-color: #faa728;
 }
+
+@media (max-width: 768px) {
+  main,
+  section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-left: 0;
+    width: 100%;
+  }
+}

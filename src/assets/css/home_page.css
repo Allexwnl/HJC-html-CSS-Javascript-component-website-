@@ -7,6 +7,11 @@ p {
   color: white;
 }
 
+p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+}
+
 .main__container__home {
   width: 100%;
   margin: 0%;
@@ -68,7 +73,6 @@ p {
   margin: 0;
 }
 
-
 #button {
   background: linear-gradient(90deg, #57c785 0%, #2a7b9b 100%);
   color: white;
@@ -84,6 +88,7 @@ p {
   background-size: 200% auto;
   cursor: pointer;
   pointer-events: auto;
+  font-size: x-large;
 }
 
 #button:hover {
